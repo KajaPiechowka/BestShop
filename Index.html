@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Raleway:wght@300;400;600;700&display=swap"
       rel="stylesheet"
@@ -16,16 +16,16 @@
 
   <body>
     <main class="main container">
-      <header class="page__header">
+      <header class="header">
         <h1 class="header__title">BestShop</h1>
-        <ul class="page__navigation">
+        <ul class="header__navigation">
           <li><a href="#">why us</a></li>
           <li><a href="#">benefits</a></li>
           <li><a href="#">prices</a></li>
           <li><a href="#">contact</a></li>
         </ul>
       </header>
-      <section class="main__section01">
+      <section class="section01">
         <h1 class="section01__title">Sell More!</h1>
         <p class="section01__paragraph">
           Open shop on our platform and increase your sales
@@ -33,7 +33,8 @@
         <button class="section01__button">Open your shop</button>
       </section>
     </main>
-    <section class="page__section02">
+    <!-----------------Sekcja 02---------------------->
+    <section class="section02">
       <h2 class="section02__title">
         The most popular sales platform in country
       </h2>
@@ -58,7 +59,9 @@
         </article>
       </div>
     </section>
-    <section class="page__section03">
+
+    <!------------------Sekcja 03---------------------->
+    <section class="section03">
       <div class="section03__articles macbook">
         <article class="section03__article01">
           <h3 class="section03__title">Be always first</h3>
@@ -68,19 +71,19 @@
             ad minim veniam.
           </p>
         </article>
-        <div class="macbook__rectangle">
-          <div class="rectangle"></div>
+        <div class="macbook__collage">
+          <div class="macbook__rectangle"></div>
           <img
-            class="section03__image-macbook"
+            class="macbook__image"
             src="../BestShop/assets/Macbook.png"
           />
         </div>
       </div>
       <div class="section03__articles iphone">
-        <div class="iphone__circle">
-          <div class="big-blue-circle"></div>
+        <div class="iphone__collage">
+          <div class="iphone__circle"></div>
           <img
-            class="section03__image-iphone"
+            class="iphone__image"
             src="../BestShop/assets/iPhone.png"
           />
         </div>
@@ -93,7 +96,7 @@
           </p>
         </article>
       </div>
-      <div class="articles__holder">
+      <div class="section03__holder">
         
         <article class="section03__article03">
           <h3 class="section03__title">Increase recognition</br> your brand!</h3>
@@ -108,55 +111,57 @@
       </div> 
       </div>
     </section>
-
-    <section class="container">
-    <section class="pricing__section04">
+<!--------------------Section 04------------------------->
+    <section class="section04">
+    <section class="section04__pricing">
       <h2 class="section04__title">Pricing</h2>
       <section class="section04__articles">
-        <article class="section04__basic section04">
-          <h4 class="basic__title">Basic</h4>
-          <h3 class="basic__price">$0</h3>
-          <ul class="basic__list">
+        <article class="section04__basic board">
+          <h4 class="board__title">Basic</h4>
+          <h3 class="board__price board_red">$0</h3>
+          <ul class="board__list">
             <li><img src="assets/Ckechmark-1.svg">100 MB HDD</li>
             <li><img src="assets/Ckechmark-1.svg">1 Subdomain</li>
             <li><img src="assets/Ckechmark-1.svg">2 E-mails</li>
             <li><img src="assets/Close.svg">Two years license</li>
             <li><img src="assets/Close.svg">Full support</li>
           </ul>
-          <button class="basic__button-red">Begin</button>
+          <button class="board__button board__button_red">Begin</button>
         </article>
-        <article class="section04__professional section04">
-          <h4 class="professional__title">Professional</h4>
-          <h3 class="professional__price">$25</h3>
-          <h6 class="professional__offer">Limited Offer</h6>
-          <ul class="professional__list">
+        <article class="section04__professional board">
+          <h4 class="board__title">Professional</h4>
+          <h3 class="board__price board_blue">$25</h3>
+          <h6 class="board__offer">Limited Offer</h6>
+          <ul class="board__list">
             <li><img src="assets/Ckechmark-1.svg">100 MB HDD</li>
             <li><img src="assets/Ckechmark-1.svg">1 Subdomain</li>
             <li><img src="assets/Ckechmark-1.svg">2 E-mails</li>
             <li><img src="assets/Ckechmark-1.svg">Two years license</li>
             <li><img src="assets/Close.svg">Full support</li>
           </ul>
-          <button class="professional__button-blue">Begin</button>
+          <button class="board__button board__button_blue">Begin</button>
         </article>
-        <article class="section04__premium section04">
-          <h4 class="premium__title">Premium</h4>
-          <h3 class="premium__price">$60</h3>
-          <h6 class="premium__offer">Limited Offer</h6>
-          <ul class="premium__list">
+        <article class="section04__premium board">
+          <h4 class="board__title">Premium</h4>
+          <h3 class="board__price board_green">$60</h3>
+          <h6 class="board__offer">Limited Offer</h6>
+          <ul class="board__list">
             <li><img src="assets/Ckechmark-1.svg">100 MB HDD</li>
             <li><img src="assets/Ckechmark-1.svg">1 Subdomain</li>
             <li><img src="assets/Ckechmark-1.svg">2 E-mails</li>
             <li><img src="assets/Ckechmark-1.svg">Two years license</li>
             <li><img src="assets/Ckechmark-1.svg">Full support</li>
           </ul>
-          <button class="premium__button-green">Begin</button>
+          <button class="board__button board__button_green">Begin</button>
         </article>
       </section>
-
     </section>
+    </section>
+    <!----------------------Section 05--------------------------->
     <section class="section05">
-      <article class="questions">
-        <h3 class="questions__title">Any questions?</h3>
+    <div class="section05__holder">
+      <article class="section05__article">
+        <h3 class="section05__title">Any questions?</h3>
         <h6>Leave your email address or call us!</h6>
         <ul>
           <li><img src="../BestShop/assets/Phone Icon.svg">@bestshop.xyz</li>
@@ -164,25 +169,125 @@
         </ul>
       </article>
     <form class="section05__form">
-      <label class="form__contact">name
+      <label class="section05__contact">name
         <input type="text" name="name">
       </label>
-      <label class="form__contact">email
+      <label class="section05__contact">email
         <input type="email" name="email">
       </label>
-      <div class="form__agreement">
-      <label class="checkbox"><input class="agreement__checkbox" type="checkbox" name="agreement" checked></label>
-      <label class="agreement__label">I hereby give consent for my personal data included in my application to be processed for the purposes of the
+      <div class="section05__agreement">
+<label class="checkbox">
+  <input type="checkbox" checked="checked">
+  <span class="rectangle"></span>
+  <span class="checkmark"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11">
+    <defs>
+      <style>
+        .a {
+          fill: #08a6e4;
+        }
+      </style>
+    </defs>
+    <g transform="translate(-5.953 -7.138)">
+      <path class="a"
+        d="M11.824,68.217a.52.52,0,0,0-.849,0l-3.5,4.373-3.685,4.6L1.024,73.741a.52.52,0,0,0-.849,0,.886.886,0,0,0,0,1.059l3.187,3.978a.52.52,0,0,0,.849,0l7.613-9.5A.886.886,0,0,0,11.824,68.217Z"
+        transform="translate(5.953 -60.859)" />
+    </g>
+  </svg></span>
+</label>
+      <label class="section05__label">I hereby give consent for my personal data included in my application to be processed for the purposes of the
       recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of
       Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such
       data, and repealing Directive 95/46/EC (Data Protection Directive)
     
     </label></div>
-    <button class="form__button-blue">send</button>
+    <button class="section05__button_blue">send</button>
 
     </form>
+  </div>
     </section>
-    <footer class="page__footer">
+    <!----------------------Calculator------------------------>
+    <section class='calculator'>
+      <h3 class="calculator__title">Calculate how much you'll pay</h3>
+      <form class="calculator__form">
+<div class="calculator-left">
+  <input class="blue-input" type="text" id='quantity' placeholder="Products quantity">
+  <input class="blue-input" type="text" id='months' placeholder="Estimated orders in month">
+  <select class="blue-input" type='select' id="package">
+    <option value="" disabled selected hidden>Choose package</option>
+    <option value="basic">Basic</option>
+    <option value="Proffesional">Professional</option>
+    <option value="Premium">Premium</option>
+  </select>
+<label class="checkbox calculator__checkbox">
+  <input type="checkbox" checked="checked">
+  <span class="rectangle"></span>
+  <span class="checkmark down"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11">
+      <defs>
+        <style>
+          .a {
+            fill: #08a6e4;
+          }
+        </style>
+      </defs>
+      <g transform="translate(-5.953 -7.138)">
+        <path class="a"
+          d="M11.824,68.217a.52.52,0,0,0-.849,0l-3.5,4.373-3.685,4.6L1.024,73.741a.52.52,0,0,0-.849,0,.886.886,0,0,0,0,1.059l3.187,3.978a.52.52,0,0,0,.849,0l7.613-9.5A.886.886,0,0,0,11.824,68.217Z"
+          transform="translate(5.953 -60.859)" />
+      </g>
+    </svg></span>Accounting
+</label>
+<label class="checkbox calculator__checkbox">
+  <input type="checkbox" checked="checked">
+  <span class="rectangle"></span>
+  <span class="checkmark down"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11">
+      <defs>
+        <style>
+          .a {
+            fill: #08a6e4;
+          }
+        </style>
+      </defs>
+      <g transform="translate(-5.953 -7.138)">
+        <path class="a"
+          d="M11.824,68.217a.52.52,0,0,0-.849,0l-3.5,4.373-3.685,4.6L1.024,73.741a.52.52,0,0,0-.849,0,.886.886,0,0,0,0,1.059l3.187,3.978a.52.52,0,0,0,.849,0l7.613-9.5A.886.886,0,0,0,11.824,68.217Z"
+          transform="translate(5.953 -60.859)" />
+      </g>
+    </svg></span>Rental of a payment terminal
+</label>
+</div>
+<div class="calculator-right">
+<ul class="calculator-right__list green-list" id="products">
+  <li>Products</li>
+  <li id='products-amount'>0</li>
+  <li id="products-price">0</li>
+</ul>
+<ul class="calculator-right__list green-list" id="orders">
+  <li>Orders</li>
+  <li id='orders-amount'>0</li>
+  <li id="orders-price">0</li>
+</ul>
+<ul class="calculator-right__list green-list" id="package">
+  <li>Package</li>
+  <li id='package-kind'>0</li>
+  <li id="package-price">0</li>
+</ul>
+<ul class="calculator-right__list green-list" id="accounting">
+  <li>Accounting</li>
+<li id="accounting-price">0</li>
+</ul>
+<ul class="calculator-right__list green-list" id="terminal">
+  <li>Terminal</li>
+  <li id="terminal-price">0</li>
+</ul>
+<ul class="calculator-right__list blue-list" id="total">
+  <li>Total</li>
+  <li id="total-price">0</li>
+</ul>
+</div>
+      </form>
+    </section>
+    <!----------------------------Footer----------------------------->
+    <footer class="footer">
       <div class="footer-left">
         <h4>BestShop</h4>
         <aside>© 2019 BestShop LTD, All Rights Reserved</aside>

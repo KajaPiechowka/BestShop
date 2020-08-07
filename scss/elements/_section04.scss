@@ -1,0 +1,115 @@
+.section04 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 1266px;
+    height: 616px;
+  }
+  &__title {
+    font-family: $font-raleway;
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  &__articles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .board {
+    width: 372px;
+    height: 461px;
+    border-radius: 18px;
+    position: relative;
+    &:hover {
+      box-shadow: 5px 10px 27px #07ace629;
+      transform: scale(1.1);
+    }
+    &__title {
+      font-family: $font-raleway;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 34px;
+      margin-bottom: 14px;
+      line-height: 24px;
+    }
+    &__price {
+      font-family: $font-open-sans;
+      font-size: 46px;
+      font-weight: lighter;
+      margin-bottom: 69px;
+      line-height: 64px;
+    }
+    &__offer {
+      font-family: $font-raleway;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 14px;
+      color: #13253b;
+    }
+
+    &__list {
+      font-family: $font-open-sans;
+      font-size: 14px;
+      line-height: 41px;
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+    &_red {
+      color: #fb3b64;
+    }
+    &_blue {
+      color: #07ace6;
+    }
+    &_green {
+      color: #55dfb4;
+    }
+    &__button {
+      color: #ffffff;
+      font-family: $font-open-sans;
+      font-weight: bold;
+      font-size: 13px;
+
+      border-radius: 23px;
+      width: 150px;
+      height: 50px;
+      position: absolute;
+      left: 112px;
+      bottom: -26px;
+      &_red {
+        background-color: #fb3b64;
+      }
+      &_blue {
+        background-color: #07ace6;
+      }
+      &_green {
+        background-color: #55dfb4;
+      }
+    }
+  }
+  &__basic {
+    border: 1px solid #fb3b64;
+  }
+  &__professional {
+    border: 1px solid #07ace6;
+    margin-left: 59px;
+    margin-right: 58px;
+  }
+  &__premium {
+    border: 1px solid #55dfb4;
+  }
+}

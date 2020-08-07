@@ -1,0 +1,75 @@
+/*section 02 */
+
+.section02 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__articles {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    article {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 121px;
+
+      h4 {
+        font-family: $font-raleway;
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 24px;
+        letter-spacing: 5.96px;
+        margin: 13px 0 19 0;
+      }
+    }
+  }
+  &__title {
+    font-family: $font-raleway;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  &__article02 {
+    margin-left: 205px;
+    margin-right: 205px;
+  }
+}
+.circle {
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  position: relative;
+}
+.circle.red {
+  background-color: #fb3b64;
+
+  &::before {
+    content: url(../assets/Person.svg);
+    position: absolute;
+  }
+}
+.circle.blue {
+  background-color: #08a6e4;
+
+  &::before {
+    content: url(../assets/Eye.svg);
+    position: absolute;
+    top: 12px;
+    left: 16px;
+  }
+}
+.circle.green {
+  background-color: #55dfb4;
+
+  &::before {
+    content: url(../assets/Catalog.svg);
+    position: absolute;
+    top: 7px;
+  }
+}
