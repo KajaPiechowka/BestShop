@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Raleway:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="./js/app.js"></script>
 
     <title>Best Shop</title>
   </head>
@@ -206,20 +207,20 @@
   </div>
     </section>
     <!----------------------Calculator------------------------>
-    <section class='calculator'>
+    <section class='calculator' id="calculator">
       <h3 class="calculator__title">Calculate how much you'll pay</h3>
       <form class="calculator__form">
 <div class="calculator-left">
-  <input class="blue-input" type="text" id='quantity' placeholder="Products quantity">
-  <input class="blue-input" type="text" id='months' placeholder="Estimated orders in month">
-  <select class="blue-input" type='select' id="package">
+  <input class="blue-input" type="number" min="0" id='quantity' placeholder="Products quantity">
+  <input class="blue-input" type="number" min="0" id='months' placeholder="Estimated orders in month">
+  <select class="blue-input" type='select' id="packageDropdown">
     <option value="" disabled selected hidden>Choose package</option>
-    <option value="basic">Basic</option>
-    <option value="Proffesional">Professional</option>
-    <option value="Premium">Premium</option>
+    <option value="basic" data-price="0">Basic</option>
+    <option value="Proffesional" data-price="25">Professional</option>
+    <option value="Premium" data-price="60">Premium</option>
   </select>
-<label class="checkbox calculator__checkbox">
-  <input type="checkbox" checked="checked">
+<label class="checkbox calculator__checkbox" >
+  <input type="checkbox" id="accountingChbx">
   <span class="rectangle"></span>
   <span class="checkmark down"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11">
       <defs>
@@ -237,7 +238,7 @@
     </svg></span>Accounting
 </label>
 <label class="checkbox calculator__checkbox">
-  <input type="checkbox" checked="checked">
+  <input type="checkbox" id="terminalChbx">
   <span class="rectangle"></span>
   <span class="checkmark down"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11">
       <defs>
@@ -258,30 +259,30 @@
 <div class="calculator-right">
 <ul class="calculator-right__list green-list" id="products">
   <li>Products</li>
-  <li id='products-amount'>0</li>
-  <li id="products-price">0</li>
+  <li id='products-amount'></li>
+  <li id="products-price"></li>
 </ul>
 <ul class="calculator-right__list green-list" id="orders">
   <li>Orders</li>
-  <li id='orders-amount'>0</li>
-  <li id="orders-price">0</li>
+  <li id='orders-amount'></li>
+  <li id="orders-price"></li>
 </ul>
 <ul class="calculator-right__list green-list" id="package">
   <li>Package</li>
-  <li id='package-kind'>0</li>
-  <li id="package-price">0</li>
+  <li id='package-kind'></li>
+  <li id="package-price"></li>
 </ul>
 <ul class="calculator-right__list green-list" id="accounting">
   <li>Accounting</li>
-<li id="accounting-price">0</li>
+<li id="accounting-price">$35</li>
 </ul>
 <ul class="calculator-right__list green-list" id="terminal">
   <li>Terminal</li>
-  <li id="terminal-price">0</li>
+  <li id="terminal-price">$5</li>
 </ul>
 <ul class="calculator-right__list blue-list" id="total">
   <li>Total</li>
-  <li id="total-price">0</li>
+  <li id="total-price"></li>
 </ul>
 </div>
       </form>

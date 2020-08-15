@@ -1103,6 +1103,7 @@ article[class*="section03"] p {
 
 .calculator-right {
   position: relative;
+  width: 400px;
 }
 
 .calculator-right__list {
@@ -1116,6 +1117,7 @@ article[class*="section03"] p {
   align-items: center;
   color: white;
   font-family: "Open Sans", sans-serif;
+  display: none;
 }
 
 .calculator-right .green-list {
