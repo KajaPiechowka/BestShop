@@ -22,25 +22,66 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalPrice = calculator.querySelector("output#total-price");
   /**total */
 
-  /**input event */
+  /**total event */
+  const inputValues = {
+    quantity: 0,
+    months: 0,
+    packageDropdown: 0,
+    terminal: 0,
+    accounting: 0,
+  };
 
+  const inputsMultiplayer = {
+    quantity: 0.5,
+    months: 2,
+    packageDropdown: 1,
+    terminal: 5,
+    accounting: 35,
+  };
+
+  function calculateTotal() {
+    return Object.keys(inputValues).reduce(
+      (total, key) => total + inputValues[key] * inputsMultiplayer[key],
+      0
+    );
+  }
+
+  function showTotal() {
+    let value = calculateTotal();
+    total.style.display = "flex";
+    total.lastElementChild.innerHTML = `$${value}`;
+  }
+
+  /**input event */
   const showProducts = () => {
     if (productsQuantity.value > 0) {
+      inputValues.quantity = productsQuantity.value;
       products.style.display = "flex";
-      products.firstElementChild.nextElementSibling.innerHTML = `${productsQuantity.value}*$0,5`;
-      products.lastElementChild.innerHTML = `$${productsQuantity.value * 0.5}`;
+      products.firstElementChild.nextElementSibling.innerHTML = `${inputValues.quantity}*$0,5`;
+      products.lastElementChild.innerHTML = `$${
+        inputValues.quantity * inputsMultiplayer.quantity
+      }`;
+      showTotal();
     } else {
       products.style.display = "none";
+      inputValues.quantity = 0;
+      showTotal();
     }
   };
   productsQuantity.addEventListener("change", showProducts);
   const showMonths = () => {
     if (months.value > 0) {
+      inputValues.months = months.value;
       orders.style.display = "flex";
-      orders.firstElementChild.nextElementSibling.innerHTML = `${months.value}*$0,5`;
-      orders.lastElementChild.innerHTML = `$${months.value * 0.25}`;
+      orders.firstElementChild.nextElementSibling.innerHTML = `${inputValues.months}*$0,5`;
+      orders.lastElementChild.innerHTML = `$${
+        inputValues.months * inputsMultiplayer.months
+      }`;
+      showTotal();
     } else {
       orders.style.display = "none";
+      inputValues.months = 0;
+      showTotal();
     }
   };
 
@@ -50,11 +91,12 @@ document.addEventListener("DOMContentLoaded", function () {
   /**dropdown event */
 
   packageDropdown.addEventListener("change", () => {
+    inputValues.packageDropdown =
+      packageDropdown.options[packageDropdown.selectedIndex].dataset["price"];
     package.style.display = "flex";
     package.firstElementChild.nextElementSibling.innerHTML = `${packageDropdown.value}`;
-    package.lastElementChild.innerHTML = `$${
-      packageDropdown.options[packageDropdown.selectedIndex].dataset["price"]
-    }`;
+    package.lastElementChild.innerHTML = `$${inputValues.packageDropdown}`;
+    showTotal();
   });
 
   /**checkboxes event */
@@ -62,21 +104,23 @@ document.addEventListener("DOMContentLoaded", function () {
   accoutingCheckbox.addEventListener("click", () => {
     if (accoutingCheckbox.checked === true) {
       accounting.style.display = "flex";
+      inputValues.accounting = 1;
+      showTotal();
     } else {
       accounting.style.display = "none";
+      inputValues.accounting = 0;
+      showTotal();
     }
-    showValue(accounting);
   });
   terminalCheckbox.addEventListener("click", () => {
     if (terminalCheckbox.checked === true) {
       terminal.style.display = "flex";
+      inputValues.terminal = 1;
+      showTotal();
     } else {
       terminal.style.display = "none";
+      inputValues.terminal = 0;
+      showTotal();
     }
   });
-  /**total event */
-  let sum = 0;
-  const showValue = function (el) {
-    console.log(el.dataset["price"]);
-  };
 });

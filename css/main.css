@@ -1102,8 +1102,9 @@ article[class*="section03"] p {
 }
 
 .calculator-right {
-  position: relative;
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+  width: 490px;
 }
 
 .calculator-right__list {
@@ -1125,11 +1126,10 @@ article[class*="section03"] p {
 }
 
 .calculator-right .blue-list {
-  position: absolute;
-  right: 0px;
+  align-self: flex-end;
   background-color: #08a6e4;
   width: 180px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .calculator__checkbox {

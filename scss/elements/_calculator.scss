@@ -35,8 +35,9 @@
     }
   }
   &-right {
-    position: relative;
-    width: 400px;
+    display: flex;
+    flex-direction: column;
+    width: 490px;
     &__list {
       border-radius: 6px;
       width: 400px;
@@ -54,11 +55,10 @@
       background-color: #55dfb4;
     }
     .blue-list {
-      position: absolute;
-      right: 0px;
+      align-self: flex-end;
       background-color: #08a6e4;
       width: 180px;
-      margin-top: 20px;
+      margin-top: 10px;
     }
   }
 }
