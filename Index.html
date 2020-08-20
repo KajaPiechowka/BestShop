@@ -220,7 +220,7 @@
     <option value="Premium" data-price="60">Premium</option>
   </select>
 <label class="checkbox calculator__checkbox" >
-  <input type="checkbox" id="accountingChbx">
+  <input type="checkbox" id="accountingChbx" >
   <span class="rectangle"></span>
   <span class="checkmark down"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11">
       <defs>
@@ -238,7 +238,7 @@
     </svg></span>Accounting
 </label>
 <label class="checkbox calculator__checkbox">
-  <input type="checkbox" id="terminalChbx">
+  <input type="checkbox" id="terminalChbx" >
   <span class="rectangle"></span>
   <span class="checkmark down"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11">
       <defs>
@@ -257,15 +257,15 @@
 </label>
 </div>
 <div class="calculator-right">
-<ul class="calculator-right__list green-list" id="products">
+<ul class="calculator-right__list green-list"  id="products">
   <li>Products</li>
   <li id='products-amount'></li>
-  <li id="products-price"></li>
+  <li id="products-price" data-price="0.5"></li>
 </ul>
-<ul class="calculator-right__list green-list" id="orders">
+<ul class="calculator-right__list green-list"  id="orders">
   <li>Orders</li>
   <li id='orders-amount'></li>
-  <li id="orders-price"></li>
+  <li id="orders-price" data-price="0.25"></li>
 </ul>
 <ul class="calculator-right__list green-list" id="package">
   <li>Package</li>
@@ -274,15 +274,15 @@
 </ul>
 <ul class="calculator-right__list green-list" id="accounting">
   <li>Accounting</li>
-<li id="accounting-price">$35</li>
+<li id="accounting-price" data-price="35">$35</li>
 </ul>
 <ul class="calculator-right__list green-list" id="terminal">
   <li>Terminal</li>
-  <li id="terminal-price">$5</li>
+  <li id="terminal-price" data-price="5" >$5</li>
 </ul>
 <ul class="calculator-right__list blue-list" id="total">
   <li>Total</li>
-  <li id="total-price"></li>
+  <li><output id="total-price"></output></li>
 </ul>
 </div>
       </form>
